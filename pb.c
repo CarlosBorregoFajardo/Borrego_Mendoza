@@ -18,7 +18,16 @@ static int my_sort_func(const void* p1, const void* p2){
 		return 0;
 	}
 }
-
+void checkwhiteballs(int balls[5], int control){ 
+  int last = balls[control]; 
+  for (int i = 0; i < control; i++){ 
+    if (last == balls[i]){ 
+      balls[control] = whiteballs_computer_generated(); 
+		break; 
+    }
+  }   
+}
+ 
 int calculate_result(int white_balls[5], int power_ball)
 {
   for (int i=0; i<5; i++)
@@ -34,40 +43,29 @@ int calculate_result(int white_balls[5], int power_ball)
   return 0;
 }
 
-int main(int argc, char** argv)
-{
-    int balls[6];
-	int count_balls = 0;
-	bool favourite = false;
-	for (int i=1; i<argc; i++)
-	{
-		goto usage_error;
-	}
-	if (6 != count_balls)
-	{
-		goto usage_error;
-	}
-	
-	// the power ball is always the last one given
-	int power_ball = balls[5];
+int whiteballs_computer_generated() { 
+	return rand()%59+1; 
+} 
 
-	// calculate result can return -1 if the ball numbers
-	// are out of range
-	int result = calculate_result(balls, power_ball);
-	if (result < 0)
-	{
-		goto usage_error;
-	}
-	if (LUCKY_NUMBER == power_ball)
-	{
-		result = result * 2;
-	}
-	if (favourite)
-	{
-		result = result * 2;
-	}
-	printf("%d percent chance of winning\n", result);
-	return 0;
-	usage_error:fprintf(stderr, "Usage: %s [-favourite] (5 white balls) power_ball\n", argv[0]);
-	return -1;
+int powerball_computer_generated() { 
+	return rand()%39+1; 
+} 
+
+int main(int argc, char** argv) 
+{ 
+	if (6 != count_balls){	
+		for (int i = 0; i < 5; i++){ 
+			balls[i] = whiteballs_computer_generated(); 
+			checkwhiteballs(balls, i); 
+		} 
+		balls[5] = powerball_computer_generated(); // Power ball 
+      printf("Your numbers are: "); 
+for (int i = 0; i < 5; i++){ 
+   printf("%d ", balls[i]); 
+      }
+      printf("\
+nAnd the power ball:"); 
+printf(" %d\
+n", balls[5]); 
+    }
 }
