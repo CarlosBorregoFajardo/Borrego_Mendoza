@@ -82,10 +82,10 @@ int main(int argc, char** argv)
 { 
 	if (6 != count_balls){	
 		for (int i = 0; i < 5; i++){ 
-			balls[i] = whiteballs_computer_generated(); 
+			balls[i] = MAX_WHITE_BALL; 
 			checkwhiteballs(balls, i); 
 		} 
-		balls[5] = powerball_computer_generated(); // Power ball 
+		balls[5] = MAX_POWER_BALL; // Power ball 
       printf("Your numbers are: "); 
 for (int i = 0; i < 5; i++){ 
    printf("%d ", balls[i]); 
