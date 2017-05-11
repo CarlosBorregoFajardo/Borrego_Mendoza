@@ -43,9 +43,36 @@ int calculate_result(int white_balls[5], int power_ball)
   return 0;
 }
 
+<<<<<<< HEAD
 int whiteballs_computer_generated() { 
 	return rand()%59+1; 
 } 
+=======
+int main(int argc, char** argv)
+{
+    int balls[6];
+	int count_balls = 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+	bool favorite = false;
+=======
+	int favourite = 0;
+>>>>>>> 1dc651e... Arreglando error ortográfico a inglés británico
+=======
+	bool favourite = false;
+>>>>>>> d9610fce0e7c7ed97c1e2bbd0b5d06c42d3e277b
+	for (int i=1; i<argc; i++)
+	{
+		goto usage_error;
+	}
+	if (6 != count_balls)
+	{
+		goto usage_error;
+	}
+	
+	// the power ball is always the last one given
+	int power_ball = balls[5];
+>>>>>>> Mortifagos
 
 int powerball_computer_generated() { 
 	return rand()%39+1; 
