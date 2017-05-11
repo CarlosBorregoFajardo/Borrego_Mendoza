@@ -24,12 +24,13 @@ int calculate_result(int white_balls[5], int power_ball)
   for (int i=0; i<5; i++)
     {
       if ((white_balls[i] < 1) || (white_balls[i] > MAX_WHITE_BALL))
-	{
-	  return -1;
-	}
+		{
+		  return -1;
+		}
     }
-	// lottery ball numbers are always shown sorted
+  // lottery ball numbers are always shown sorted
   qsort(white_balls, 5, sizeof(int), my_sort_func);
+  // Here should be typed a function to calculate the probability
   return 0;
 }
 
@@ -38,10 +39,14 @@ int main(int argc, char** argv)
     int balls[6];
 	int count_balls = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	bool favorite = false;
 =======
 	int favourite = 0;
 >>>>>>> 1dc651e... Arreglando error ortográfico a inglés británico
+=======
+	bool favourite = false;
+>>>>>>> d9610fce0e7c7ed97c1e2bbd0b5d06c42d3e277b
 	for (int i=1; i<argc; i++)
 	{
 		goto usage_error;
