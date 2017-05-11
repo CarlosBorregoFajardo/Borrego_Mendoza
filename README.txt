@@ -1,1 +1,1 @@
-practicas de Carlos Borrego Fajardo y Jesús Mendoza Lara
+practicas de Carlos Borrego Fajardo y Jesús Mendoza Lara (Potter apesta)
