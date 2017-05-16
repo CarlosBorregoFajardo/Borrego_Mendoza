@@ -18,6 +18,8 @@ static int my_sort_func(const void* p1, const void* p2){
 		return 0;
 	}
 }
+//1
+<<<<<<< HEAD
 void checkwhiteballs(int balls[5], int control){ 
   int last = balls[control]; 
   for (int i = 0; i < control; i++){ 
@@ -28,6 +30,10 @@ void checkwhiteballs(int balls[5], int control){
   }   
 }
  
+=======
+//cambio
+
+>>>>>>> 477d9ce2df430fddec822b5fd6219970b454f7eb
 int calculate_result(int white_balls[5], int power_ball)
 {
   for (int i=0; i<5; i++)
