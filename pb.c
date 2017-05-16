@@ -20,6 +20,7 @@ static int my_sort_func(const void* p1, const void* p2){
 }
 //1
 //2
+//3
 <<<<<<< HEAD
 void checkwhiteballs(int balls[5], int control){ 
   int last = balls[control]; 
